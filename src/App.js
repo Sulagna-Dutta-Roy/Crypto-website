@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Coin from './Coin';
 
@@ -26,7 +26,10 @@ const filteredCoins = coins.filter(coin =>
       <div className='coin-search'>
         <h1 className='coin-text'>Crytocurrency Website</h1>
         <form>
-          <input type="text" classname='coin-input' placeholder="Search" onChange={handleChange}/>
+          <button type="button" class="search-button" disabled>
+            <img alt="magnifier search icon" src="search.png"/>
+          </button>
+          <input type="search" classname='coin-input' placeholder="Search" onChange={handleChange}/>
         </form>
       </div>
     {filteredCoins.map(coin => {
